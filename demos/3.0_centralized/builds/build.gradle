@@ -1,5 +1,3 @@
-apply plugin: 'jenkins'
-
 def branches = [ 'master', 'develop' ]
 jenkins {
     jobs {

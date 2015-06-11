@@ -1,15 +1,16 @@
 buildscript {
-    repositories {
-        jcenter()
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
     }
-
-    dependencies {
-        classpath('com.terrafolio:gradle-jenkins-plugin:1.+')
-    }
+  }
+  dependencies {
+    classpath "com.terrafolio:gradle-jenkins-plugin:1.3.1"
+  }
 }
 
 allprojects { 
-    apply plugin: 'jenkins'
+    apply plugin: "com.terrafolio.jenkins"
 
     ext.projects = [:]
     (1..100).each { 
